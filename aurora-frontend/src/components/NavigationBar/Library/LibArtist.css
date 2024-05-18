@@ -1,0 +1,47 @@
+.lib_artist{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding : 10px;
+    border-radius: 3px;
+    margin : 15px 0 15px 0;
+}
+
+.lib_artist:hover{
+    cursor: pointer;
+    background-color: #1e1e1e;
+}
+
+.artist_thumbnail_container{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    max-width: 35px;
+    border-radius: 17.5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist_thumbnail_container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 17.5px;
+}
+
+.lib-artist-info-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.lib-artist-info-container p{
+    font-weight: bold;
+}
+
+.artist-name{
+    color: #e3e3e3;
+
+}
+.artist-info{
+    color: #7b7b7b;
+    font-size: 0.81rem;
+}

@@ -1,0 +1,36 @@
+.volume-control{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap : 10px;
+    margin : 0 10px 0 10px;
+}
+
+.volume-slider-container{
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-icon{
+    color: #7b7b7b;
+    transition: all 0.3s ease;
+}
+
+.volume-icon:hover{
+    color:white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.fullscreen-icon{
+    color: #7b7b7b;
+    transition: all 0.3s ease;
+}
+
+.fullscreen-icon:hover{
+    color:white;
+    cursor: pointer;
+    transform: scale(1.1);
+}

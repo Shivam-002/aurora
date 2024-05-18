@@ -1,0 +1,80 @@
+.playlist-song-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 7px;
+  padding : 15px 30px 15px 30px;
+
+
+}
+
+.playlist-song-row:hover{
+  background-color: #181818;
+}
+
+.song-img-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 7px;
+  background-color: #242424;
+}
+.playlist-song-row > span{
+  font-size: .9em;
+  font-weight: 700;
+  color: #e3e3e3;
+}
+
+.song-img-container > p{
+  font-size: .9em;
+  font-weight: 700;
+  color: #7b7b7b;
+}
+
+.song-row-number{
+  width: 2%;
+}
+
+.song-row-title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 35%;
+}
+
+.song-row-album{
+  width: 33%;
+}
+
+.song-row-date-added{
+  width: 15%;
+}
+
+.song-row-duration{
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap : 20px;
+}
+
+.song-title-text{
+  font-weight: 700;
+  color: #e3e3e3;
+}
+
+.song-artists-text{
+  font-size: .8rem;
+  font-weight: 700;
+  color: #7b7b7b;
+}
+
+.song-info-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}

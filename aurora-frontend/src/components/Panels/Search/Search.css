@@ -1,0 +1,23 @@
+.search-page{
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    margin-right: 10px;
+    overflow-x: hidden;
+
+
+}
+
+.section-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-radius: 7px;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #282828 #1e1e1e;
+}
+
+.section-container:hover{
+    overflow-x: auto;
+}

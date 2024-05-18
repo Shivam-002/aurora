@@ -1,0 +1,29 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    border-radius: 3px;
+    margin-right: 10px;
+    overflow: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #282828 #121212;
+}
+
+.home:hover{
+    overflow: auto;
+}
+
+.section-container3{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-radius: 7px;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #282828 #1e1e1e;
+
+}
+
+.section-container3:hover{
+    overflow-x: auto;
+}

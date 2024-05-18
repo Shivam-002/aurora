@@ -1,0 +1,12 @@
+.panel-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.nav-flex-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

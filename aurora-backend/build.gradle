@@ -1,0 +1,87 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.2'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.thunder'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	//Spring
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security:3.1.0'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	//JWT 
+	implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.5'
+    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.5'
+    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.5'
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	implementation 'org.postgresql:postgresql'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// https://mvnrepository.com/artifact/org.elasticsearch/elasticsearch
+    implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+
+	// https://mvnrepository.com/artifact/org.hibernate/hibernate-java8
+
+
+//     //Reverse Map
+//    reverseMap 'org.hibernate:hibernate-core:4.0.1.Final'
+//     reverseMap 'org.hibernate:hibernate-tools:4.0.1.Final'
+//     reverseMap 'org.slf4j:slf4j-simple:1.7.5'
+//     reverseMap 'org.postgresql:postgresql'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+// project.ext {
+//     hibernateDestDir = file("$projectDir/src/main/java")
+// }
+
+// task reverseMap {
+//     outputs.dir hibernateDestDir
+//     doLast {
+//         println "Hibernate file : $projectDir/hibernate.cfg.xml"
+//         hibernateDestDir.exists() || hibernateDestDir.mkdirs()
+//         ant {
+//             taskdef(
+//                 name: 'hibernatetool',
+//                 classname: 'org.hibernate.tool.ant.HibernateToolTask',
+//                 classpath: configurations.reverseMap.asPath
+//             )
+//             hibernatetool(destdir: hibernateDestDir) {
+//                 jdbcconfiguration(
+//                     configurationfile: "$projectDir/hibernate.cfg.xml",
+//                     packagename: "com.thunder.aurora.entities" 
+//                 )
+//                 hbm2java(
+//                     jdk5: true,
+//                     ejb3: true
+//                 )
+//             }
+//         }
+//     }
+// }

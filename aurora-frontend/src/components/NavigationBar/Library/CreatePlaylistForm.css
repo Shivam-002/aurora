@@ -1,0 +1,17 @@
+.create-playlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    gap:10px;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 15px 25px;
+    background-color: #181818;
+    color: #e3e3e3;
+    border-radius: 20px;
+    align-items: center;
+    z-index: 5; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}

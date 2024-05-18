@@ -1,0 +1,26 @@
+server:
+    port: 8080 
+    servlet:
+        context-path: '/aurora'
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/aurora
+    username: aurora
+    password: aurora
+    driverClassName: org.postgresql.Driver
+  jackson:
+    time-zone: UTC
+
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: false
+    properties:
+        hibernate:
+            default_schema: public
+            format_sql: true
+            jdbc.time_zone: UTC
+
+jwt:
+  secret: lnURiTvAdG7EcKSTUtcln7k80UhxDvj+h4wSFfGSVEargLf8UOkP/aeUO2UVvxOm
+  validity : 86400000

@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+
+  aurora-meta-db:
+    image: postgres:15.2
+    environment:
+      POSTGRES_USER: aurora
+      POSTGRES_PASSWORD: aurora
+      POSTGRES_DB: aurora
+    ports:
+      - "5432:5432"
+
+  aurora-data-server:
+    image: nginx
+    volumes:
+      - ./data:/usr/share/nginx/html/data
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "5333:80"
+    command: [ "nginx", "-g", "daemon off;" ]
+
+  aurora-backend:
+    image: aurora-backend
+    build:
+      context: ./aurora-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - aurora-meta-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://aurora-meta-db:5432/aurora
+      SPRING_DATASOURCE_USERNAME: aurora
+      SPRING_DATASOURCE_PASSWORD: aurora
+
+  aurora-frontend:
+    image: aurora-frontend
+    depends_on:
+      - aurora-backend
+    build:
+      context: ./aurora-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"

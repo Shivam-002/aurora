@@ -1,0 +1,32 @@
+.custom-field{
+    display: flex;
+    flex-direction: column;
+}
+
+.field-hint{
+    color: #e3e3e3;
+    font-weight: 500;
+}
+
+.custom-field-input{
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    border : solid 2px #7b7b7b;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #e3e3e3;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.hint-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error-hint{
+    color: #ff0000;
+    font-weight: 500;
+    font-size: 0.8rem;
+}

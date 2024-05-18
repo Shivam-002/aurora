@@ -1,0 +1,30 @@
+.playlist-song-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 7px;
+    padding : 15px 30px 15px 30px;
+}
+
+.playlist-song-header span{
+    font-size: .9em;
+    font-weight: 700;
+    color: #7b7b7b;
+}
+
+.song-header-number{
+    width: 2%;
+}
+
+.song-header-title{
+    width: 35%;
+}
+
+.song-header-album{
+    width: 33%;
+}
+
+.song-header-date-added{
+    width: 15%;
+}
+

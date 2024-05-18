@@ -1,0 +1,18 @@
+.card {
+    background-color: #121212;
+    border-radius: 7px;
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+.library_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-bottom: 15px;
+}
+
+.library_title > h3 {
+    background-color: #282828;
+}
